@@ -1,0 +1,13 @@
+services:
+  web:
+    image: "${PROJECT_NAME}:${RUBY_VERSION}"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        PROJECT_NAME: ${PROJECT_NAME}
+        RUBY_VERSION: ${RUBY_VERSION}
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
