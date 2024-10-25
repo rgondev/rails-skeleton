@@ -1,12 +1,12 @@
 services:
   web:
-    image: "${PROJECT_NAME}:${RUBY_VERSION}"
+    image: "${project_name}:${ruby_version}"
     build:
       context: ./
       dockerfile: Dockerfile
       args:
-        PROJECT_NAME: ${PROJECT_NAME}
-        RUBY_VERSION: ${RUBY_VERSION}
+        PROJECT_NAME: ${project_name}
+        RUBY_VERSION: ${ruby_version}
     ports:
       - "3000:3000"
     volumes:
